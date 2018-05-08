@@ -1,9 +1,8 @@
-	
-	<?php 
+<?php 
 	require_once "header.php";
 	require_once "slider.php";
 
-	?>
+?>
 	
 	<section>
 		<div class="container">

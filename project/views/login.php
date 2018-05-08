@@ -23,8 +23,8 @@
 				<div class="col-sm-1">
 					<h2 class="or">OR</h2>
 				</div>
-				<div class="col-sm-4">
-					<div class="signup-form"><!--sign up form-->
+				 <div class="col-sm-4">
+					<div class="signup-form">
 						<h2>New User Signup!</h2>
 						<form action="#">
 							<input type="text" placeholder="Name"/>
@@ -32,7 +32,7 @@
 							<input type="password" placeholder="Password"/>
 							<button type="submit" class="btn btn-default">Signup</button>
 						</form>
-					</div><!--/sign up form-->
+					</div><!--/sign up form -->
 				</div>
 			</div>
 		</div>

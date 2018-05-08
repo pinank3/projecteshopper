@@ -9,7 +9,7 @@
 	}
 	interface db_general_function{
 		function insert();
-		function select();
+		function select($cols,$tables,$conditions);
 		function delete();
 		function update();
 	}
