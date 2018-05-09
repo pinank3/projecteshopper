@@ -8,14 +8,16 @@
 							?>
 							<div class="panel panel-default">
 								<div class="panel-heading">
-									<h4 class="panel-title"><a href="#"><?php echo $val['ca_name'] ?></a></h4>
+									<h4 class="panel-title"><a href="filter_category.php?id=<?php echo $val['ca_id']; ?>">
+										<?php echo $val['ca_name'] ?></a></h4>
 								</div>
+							</div>
 								<?php
 									endforeach;
 									endif;	
 								?>
 
-							</div>
+							
 						</div><!--/category-products-->
 					
 						<div class="brands_products"><!--brands_products-->
