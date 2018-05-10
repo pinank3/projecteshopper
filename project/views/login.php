@@ -10,8 +10,8 @@
 					<div class="login-form"><!--login form-->
 						<h2>Login to your account</h2>
 						<form method="post" action="../controllers/login-action.php">
-							<input type="email" name="User email" placeholder="Enter User Email Address" />
-							<input type="password" name="User password" placeholder="Enter User Password"/>
+							<input type="email" name="useremail" placeholder="Enter User Email Address" />
+							<input type="password" name="userpassword" placeholder="Enter User Password"/>
 							<span>
 								<input type="checkbox" class="checkbox"> 
 								Keep me signed in
@@ -27,11 +27,11 @@
 					<div class="signup-form">
 						<h2>New User Signup!</h2>
 						<form method="post" action="../controllers/register-action.php">
-							<input type="text" name="Enter name" placeholder="Name" />
-							<input type="text" name="Enter Mobile No" placeholder="Mobile No."/>
-							<input type="email" name="User email" placeholder="Enter User Email Address" />
-							<input type="password" name="User password" placeholder="Enter User Password"/>
-							<input type="password" name="Confirm password" placeholder="Enter User CPassword"/>
+							<input type="text" name="username" placeholder="Name" />
+							<input type="text" name="usermobile" placeholder="Mobile No."/>
+							<input type="email" name="useremail" placeholder="Enter User Email Address" />
+							<input type="password" name="userpassword" placeholder="Enter User Password"/>
+							<input type="password" name="cpassword" placeholder="Enter User CPassword"/>
 							<button type="submit" class="btn btn-default">Register</button>
 						</form>
 					</div><!--/sign up form -->
