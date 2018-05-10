@@ -1,7 +1,11 @@
 <?php 
 	require_once 'db_connect.php';
 	abstract class db_helper extends db_connect implements db_general_function{
-		function insert(){}
+		function insert($table,$columns,$values){
+			$sql="insert into users ($columns) values($values)";
+			// echo $sql;
+			return $this->conn->query($sql) or die($this->conn->error);
+		}
 		function select($cols,$tables,$conditions){
 			$sql= "select $cols from $tables where $conditions";
 			// echo $sql;
