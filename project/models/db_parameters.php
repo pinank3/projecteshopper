@@ -1,5 +1,12 @@
 <?php
-	require_once "db_functions.php";
+	if(session_id()==""){
+		session_start();
+		// echo session_id();
+
+	}
+
+		require_once "db_functions.php";
+	
 
 	interface db_parameters{
 		const HOSTNAME="localhost";

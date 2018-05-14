@@ -1,5 +1,5 @@
-<?php 
-	require_once "db_helper.php";
+<?php
+require_once "db_helper.php";
 
 	final class db_project extends db_helper{
 		function show_brands(){

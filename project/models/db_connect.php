@@ -1,4 +1,4 @@
-<?php 
+<?php
 	require_once "db_parameters.php";
 
 	abstract class db_connect implements db_parameters{
