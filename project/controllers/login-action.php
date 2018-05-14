@@ -17,6 +17,12 @@
 				echo "Password does not match";
 			}
 			else{
+				$_SESSION['project_uid']=$result[0]['us_id'];
+				$_SESSION['project_name']=$result[0]['us_name'];
+				$_SESSION['project_email']=$result[0]['us_email'];
+				$_SESSION['project_mobile']=$result[0]['us_mobile'];
+
+				// print_r($_SESSION);
 				echo "ok";
 			}
 		}
