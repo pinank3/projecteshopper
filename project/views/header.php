@@ -118,12 +118,24 @@
 								<li><a href="index.php" class="active">Home</a></li>
 								<li class="dropdown"><a href="#">User Panel<i class="fa fa-angle-down"></i></a>
                                     <ul role="menu" class="sub-menu">
+                                    	<?php
+                                    		if(!isset($_SESSION['project_name'])):
+                                    	?>
                                        	<li><a href="login.php">Login</a></li>
+                                       	<?php
+                                       	endif;
+                                       	?>
+                                       	<?php
+                                    		if(isset($_SESSION['project_name'])):
+                                    	?>
                                        	<li><a href="add-categorylogin.php">Add Category</a></li>
                                        	<li><a href="dd-brand.php">Add Brand</a></li>
                                        	<li><a href="add-product.php">Add Product</a></li>
                                        	<li><a href="change-password.php">Change Password</a></li>
-                                       	<li><a href="logout.php">Logout</a></li> 
+                                       	<li><a href="logout.php">Logout</a></li>
+                                       	 <?php
+                                       	endif;
+                                       	?>
                                     </ul>
                                 </li> 
 								<li class="dropdown"><a href="#">Blog<i class="fa fa-angle-down"></i></a>
