@@ -18,6 +18,6 @@
 		function insert($table,$columns,$values);
 		function select($cols,$tables,$conditions);
 		function delete();
-		function update();
+		function update($tables,$records,$condition);
 	}
 ?>

@@ -9,15 +9,15 @@ require_once "header.php";
 <div class="container">
 	<div class="col-sm-4">
 					<div class="signup-form">
-						<h2>New User Signup!</h2>
-						<form id="register_form" ">
+						<h2>New Password!</h2>
+						<form id="update_form" ">
 							
-							<input type="email" name="useremail" placeholder="Enter User Email Address" />
-							<input type="password" name="userpassword" placeholder="Enter User Password"/>
-							<input type="password" name="cpassword" placeholder="Enter User CPassword"/>
-							<button type="button" class="btn btn-default btn-register">Register</button>
+							<input type="password" name="cpass" placeholder="Enter current password" />
+							<input type="password" name="npass" placeholder="Enter new  Password"/>
+							<input type="password" name="cnpass" placeholder="Enter CPassword"/>
+							<button type="button" class="btn btn-default btn-update">Update</button>
 						</form>
-						<div class="msg_register"></div>
+						<div class="msg_update"></div>
 					</div><!--/sign up form -->
 				</div>
 </div>

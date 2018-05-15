@@ -43,7 +43,16 @@ require_once "db_helper.php";
 					"*","users","us_email='$email'"
 			);
 
-				}
+		}
+			function get_password_userwise($email){
+					return $this->select(
+					"us_password","users","us_email='$email'"
+			);
+
+		}
+		function update_password($pass,$email){
+			return $this->update("users","us_password='$pass'","us_email='$email'");
+		}
 	}
 	$obj = new  db_project();
 ?>

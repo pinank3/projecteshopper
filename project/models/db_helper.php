@@ -31,6 +31,9 @@
 				}
 		}
 		function delete(){}
-		function update(){}
+		function update($tables,$records,$condition){
+			$sql= "update $tables set $records where $condition";
+			return $this->conn->query($sql) or die($this->conn->error);
+		}
 	}
 ?>

@@ -11,7 +11,7 @@
 		$result =$obj->get_user_data($_POST['useremail']);
 		// pre($result);
 		if(is_array($result)){
-			$txtpass=sha1($_POST['useremail']);
+			$txtpass=sha1($_POST['userpassword']);
 			// echo $txtpass;
 			if($txtpass!=$result[0]['us_password']){
 				echo "Password does not match";
