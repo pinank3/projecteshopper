@@ -36,7 +36,14 @@
 			$email=$_SESSION['project_email'];
 			$fans=$obj->update_password($newpass,$email);
 			var_dump($fans);
-			
+			$to ="pinank3@gmail.com";
+
+			$subject= "Test Mail From Php code";
+			$txt="Hello World! ";
+			$headers ="From:<vishal@php-training.in>";
+
+			$result= mail($to,$subject,$txt,$headers);
+			var_dump($result);
 		}
 		else {
 			echo "curent pasword mismatch";
