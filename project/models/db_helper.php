@@ -2,7 +2,7 @@
 	require_once 'db_connect.php';
 	abstract class db_helper extends db_connect implements db_general_function{
 		function insert($table,$columns,$values){
-			$sql="insert into users ($columns) values($values)";
+			$sql="insert into $table ($columns) values($values)";
 			// echo $sql;
 			return $this->conn->query($sql) or die($this->conn->error);
 		}

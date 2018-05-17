@@ -128,8 +128,8 @@
                                        	<?php
                                     		if(isset($_SESSION['project_name'])):
                                     	?>
-                                       	<li><a href="add-categorylogin.php">Add Category</a></li>
-                                       	<li><a href="dd-brand.php">Add Brand</a></li>
+                                       	<li><a href="add-category.php">Add Category</a></li>
+                                       	<li><a href="add-brand.php">Add Brand</a></li>
                                        	<li><a href="add-product.php">Add Product</a></li>
                                        	<li><a href="change-password.php">Change Password</a></li>
                                        	<li><a href="logout.php">Logout</a></li>

@@ -53,6 +53,30 @@ require_once "db_helper.php";
 		function update_password($pass,$email){
 			return $this->update("users","us_password='$pass'","us_email='$email'");
 		}
+		function check_brand_count($brname){
+			return self::select(
+				"count(*) as cnt","brands","br_name='$brname'"
+			);
+		}
+		function brand_insert($name){
+			return self::insert(
+					"brands",
+					"br_name",
+					"'$name'"
+					);			
+				}
+		function check_category_count($caname){
+			return self::select(
+				"count(*) as cnt","categories","ca_name='$caname'"
+			);
+		}
+		function category_insert($name){
+			return self::insert(
+					"categories",
+					"ca_name",
+					"'$name'"
+					);			
+				}
 	}
 	$obj = new  db_project();
 ?>
