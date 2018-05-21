@@ -40,7 +40,7 @@
 												<h2><del><?php echo $val['pro_price'] ?></del>
 												<?php echo ($val['pro_price'])-($val['pro_price']*$val['pro_discount']/100);?></h2>
 												<p><?php echo $val['pro_name'];  ?></p>
-												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+												<a href="#" for="<?php echo $val['pro_id']; ?>" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
 											</div>
 										</div>
 								</div>

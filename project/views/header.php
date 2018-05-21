@@ -92,7 +92,22 @@
 								<li><a href="#"><i class="fa fa-user"></i> Account</a></li>
 								<li><a href="#"><i class="fa fa-star"></i> Wishlist</a></li>
 								<li><a href="checkout.html"><i class="fa fa-crosshairs"></i> Checkout</a></li>
-								<li><a href="cart.html"><i class="fa fa-shopping-cart"></i> Cart</a></li>
+
+								<li><a href="cart.php"><i class="fa fa-shopping-cart"></i> 
+								<?php
+								if(isset($_COOKIE['cookie_product_id'])){
+									$ans =explode(",",$_COOKIE['cookie_product_id']);
+									// print_r($ans);
+									$result=array_unique($ans);
+									// print_r($result);
+									$cartcnt=count($result);
+								}
+								else{
+									$cartcnt=0;
+								}
+								?>
+								Cart(<span class="cart_count"><?php echo $cartcnt; ?></span>)</a></li>
+
 								<li><a href="login.php"><i class="fa fa-lock"></i> Login</a></li>
 							</ul>
 						</div>
@@ -100,6 +115,11 @@
 				</div>
 			</div>
 		</div><!--/header-middle-->
+		<div class="cart_toast_msg">Cart Updated</div>
+		<style>
+			.cart_toast_msg{width:100px;height:60px;background:rgba(0,0,0,0.5);color:white;font-size:20px;
+				position:fixed;top:10%;right:0;display: none;}
+		</style>
 	
 		<div class="header-bottom"><!--header-bottom-->
 			<div class="container">
