@@ -19,4 +19,5 @@ $(document).ready(function(){
 			$(".msg_category").html(res);
 		})
 	})
+
 })
