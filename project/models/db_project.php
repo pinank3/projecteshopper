@@ -76,7 +76,13 @@ require_once "db_helper.php";
 					"ca_name",
 					"'$name'"
 					);			
-				}
+		}
+
+		function show_cart_record($pro){
+			// echo $pro;
+			return $this->select("*","products","pro_id in($pro) order by pro_id desc");
+		}
+
 	}
 	$obj = new  db_project();
 ?>
