@@ -2,7 +2,7 @@
 	require_once "db_parameters.php";
 
 	abstract class db_connect implements db_parameters{
-		protected $conn="";
+		public $conn="";
 
 		function __construct(){
 			$this->conn=new mysqli(self::HOSTNAME,self::USER,self::PASSWORD,self::DATABASE);

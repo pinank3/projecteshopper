@@ -82,6 +82,13 @@ require_once "db_helper.php";
 			// echo $pro;
 			return $this->select("*","products","pro_id in($pro) order by pro_id desc");
 		}
+		function product_insert($data){
+			return self::insert(
+					"products",
+					"pro_name,pro_price,pro_discount,pro_caid,pro_brid,pro_description,pro_path",
+					"'$data[0]','$data[1]','$data[2]','$data[3]','$data[4]','$data[5]','$data[6]'"
+					);
+		}
 
 	}
 	$obj = new  db_project();
