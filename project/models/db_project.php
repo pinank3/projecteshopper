@@ -89,6 +89,25 @@ require_once "db_helper.php";
 					"'$data[0]','$data[1]','$data[2]','$data[3]','$data[4]','$data[5]','$data[6]'"
 					);
 		}
+		function wishlist_insert($pid,$uid){
+			echo $pid;
+			return parent::insert(
+				"wishlist",
+				"wi_uid,wi_pid",
+				"'$uid','$pid'"
+			);
+		}
+		function check_count_wishlist($pid,$uid){
+			return self::select(
+				"count(*) as cnt","wishlist","wi_uid='$uid' and wi_pid='$pid'"
+			);
+		}
+		function show_wishlist_record($uid){
+			echo $uid;
+			return $this->select(
+				"pro_id,pro_name,pro_price,pro_discount,pro_description,pro_path","products,wishlist","wi_id='$uid' and wi_pid=pro_id"
+		);
+		}
 
 	}
 	$obj = new  db_project();

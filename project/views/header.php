@@ -152,6 +152,7 @@
                                        	<li><a href="add-brand.php">Add Brand</a></li>
                                        	<li><a href="add-product.php">Add Product</a></li>
                                        	<li><a href="change-password.php">Change Password</a></li>
+                                       	<li><a href="wishlist.php">Wishlist</a></li>
                                        	<li><a href="logout.php">Logout</a></li>
                                        	 <?php
                                        	endif;
