@@ -66,4 +66,24 @@ $(document).ready(function(){
 				curtag.parent().parent().parent().parent().parent().fadeOut(500)
 		 })
 	})
+	$(".add-to-wishlist").click(function(anch_obj){
+		anch_obj.preventDefault();
+		// alert(1)
+		proid =$(this).attr("for");
+		alert(proid);
+
+		$.ajax({
+			type:"post",
+			data:"x="+proid,
+			// contentType:false,
+			// processData:false,
+			url:"../controllers/wishlist-action.php",
+			success:function(res){
+				console.log(res);
+			},
+			error :function(errmsg){
+				console.log(errmsg);
+			}
+		})
+	})
 })
