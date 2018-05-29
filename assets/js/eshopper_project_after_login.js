@@ -19,5 +19,26 @@ $(document).ready(function(){
 			$(".msg_category").html(res);
 		})
 	})
+	$(".btn-product").click(function(){
+		// alert(111)
+		// record=$("#product_form").serialize();
+		formobj=document.getElementById("product_form");
+		// alert(formobj)
+		dataobj= new FormData(formobj);
+		// alert(dataobj)
+		$.ajax({
+			data:dataobj,
+			url:"../controllers/product-action.php",
+			contentType:false,
+			processData:false,
+			type:"post",
+			success:function(res){
+				$(".msg_product").html(res);
+			},
+			error :function(errmsg){
+				console.log(errmsg);
+			}
+			});
+	})
 
 })
