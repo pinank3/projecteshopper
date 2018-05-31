@@ -17,7 +17,7 @@
 	interface db_general_function{
 		function insert($table,$columns,$values);
 		function select($cols,$tables,$conditions);
-		function delete();
+		function delete($table,$condition);
 		function update($tables,$records,$condition);
 	}
 ?>

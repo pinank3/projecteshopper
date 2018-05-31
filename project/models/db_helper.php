@@ -30,7 +30,10 @@
 					return 0;
 				}
 		}
-		function delete(){}
+		function delete($table,$condition){
+			$sql="delete from $table where $condition";
+			return $this->conn->query($sql) or die($this->conn->error);
+		}
 		function update($tables,$records,$condition){
 			$sql= "update $tables set $records where $condition";
 			return $this->conn->query($sql) or die($this->conn->error);
