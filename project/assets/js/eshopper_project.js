@@ -86,4 +86,17 @@ $(document).ready(function(){
 			}
 		})
 	})
+	$(".delete-to-wishlist").click(function(anch_obj){
+		curtag=$(this)
+		anch_obj.preventDefault();
+		// alert(111)
+		proid =$(this).attr("for");
+		// alert(proid);
+		$.post("../controllers/delete-wishlist-action.php","x="+proid).success(function(response){
+			console.log(response);
+			// alert(response)
+			curtag.parent().parent().parent().parent().parent().fadeOut(500)
+		});
+
+	})
 })
