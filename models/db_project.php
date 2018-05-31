@@ -99,13 +99,13 @@ require_once "db_helper.php";
 		}
 		function check_count_wishlist($pid,$uid){
 			return self::select(
-				"count(*) as cnt","wishlist","wi_uid='$uid' and wi_pid='$pid'"
+				"count(*) as cnt","wishlist","wi_pid='$pid' and wi_uid='$uid'"
 			);
 		}
 		function show_wishlist_record($uid){
-			echo $uid;
+			// echo $uid;
 			return $this->select(
-				"pro_id,pro_name,pro_price,pro_discount,pro_description,pro_path","products,wishlist","wi_id='$uid' and wi_pid=pro_id"
+				"pro_id,pro_name,pro_price,pro_discount,pro_description,pro_path","products,wishlist","wi_uid='$uid' and wi_pid=pro_id"
 		);
 		}
 		function delete_from_wishlist($uid,$id){
